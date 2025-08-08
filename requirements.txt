@@ -1,11 +1,5 @@
-streamlit
-pandas
+streamlit>=1.20
 beautifulsoup4
-deep_translator
-python-docx
-openpyxl
-python-pptx
-pypandoc
-email-validator
 lxml
-html5lib
+deep-translator
+langdetect

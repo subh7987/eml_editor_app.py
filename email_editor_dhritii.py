@@ -5,9 +5,7 @@ from email.generator import BytesGenerator
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from io import BytesIO
-from googletrans import Translator
-
-translator = Translator()
+from deep_translator import GoogleTranslator
 
 st.set_page_config(page_title="Email Editor", layout="wide")
 
@@ -42,13 +40,13 @@ if uploaded_file:
     with col2:
         st.subheader("Translation Tools")
         if st.button("Translate to English"):
-            edited_body = translator.translate(edited_body, dest="en").text
+            edited_body = GoogleTranslator(source="auto", target="en").translate(edited_body)
             st.success("Translated to English!")
 
-        target_lang = st.text_input("Translate back to language (e.g., 'hi' for Hindi, 'fr' for French)", "")
+        target_lang = st.text_input("Translate back to language code (e.g., hi, fr, es)", "")
         if st.button("Translate Back"):
             if target_lang.strip():
-                edited_body = translator.translate(edited_body, dest=target_lang.strip()).text
+                edited_body = GoogleTranslator(source="auto", target=target_lang.strip()).translate(edited_body)
                 st.success(f"Translated back to {target_lang}!")
 
     if st.button("Save EML"):

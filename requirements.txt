@@ -1,3 +1,8 @@
-streamlit>=1.20
+streamlit
+streamlit-option-menu
 beautifulsoup4
-googletrans==4.0.0-rc1
+lxml
+deep-translator
+email
+python-docx
+pandas

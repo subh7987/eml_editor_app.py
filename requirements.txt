@@ -1,8 +1,11 @@
 streamlit
-streamlit-option-menu
-beautifulsoup4
-lxml
-deep-translator
-email
-python-docx
 pandas
+beautifulsoup4
+deep_translator
+python-docx
+openpyxl
+python-pptx
+pypandoc
+email-validator
+lxml
+html5lib
